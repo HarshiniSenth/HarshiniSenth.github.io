@@ -8,26 +8,28 @@ redirect_from:
 ---
 In our daily lives, weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulations used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
 
-![Weather Forecast](/images/img1.jpeg "Fig 1| Weather Forecast")
+![Weather Forecast](/images/img1.jpeg "Fig 1:Weather Forecast")
 
 Efficient models based on deep neural networks
 represent a promising alternative framework for weather modeling (ADD REFERENCE HERE 5,6). 
 This blog post presents a neural network capable of predicting precipitation at a high resolution up to 12 h ahead.
 
 ## The Need for Improved Short-Term Forecasting: 
-NWP models rely on complex mathematical equations and supercomputers to simulate the behavior of the atmosphere over time. The forecasts typically have a grid resolution of 3–12 km and a frequency of one or more hours. These models require significant computational resources to simulate the complex interactions of the atmosphere accurately. Running high-resolution models over large geographic areas and long forecast periods can be computationally intensive and time-consuming. These models are sensitive to errors in the initial conditions. Small inaccuracies in the observed data can lead to significant errors in the forecast. 
+NWP models rely on complex mathematical equations and supercomputers to simulate the behavior of the atmosphere over time.These models require significant computational resources to simulate the complex interactions of the atmosphere accurately. Running high-resolution models over large geographic areas and long forecast periods can be computationally intensive and time-consuming. These models are sensitive to errors in the initial conditions. Small inaccuracies in the observed data can lead to significant errors in the forecast. 
 
 Neural network-driven models present a hopeful option as they extract connections from data directly. They have the capability to produce forecasts more frequently and at finer resolutions, operating smoothly on parallel hardware within seconds. Moreover, neural networks inherently offer probabilistic forecasts, encompassing forecast fluctuations derived from the data.These properties can not only offer
 improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3)
 
 ## Introducing MetNet-2: 
-MetNet-2 is a probabilistic weather model based on deep neural networks that is a successor to MetNet (ADD REFERENCE 7). This model has frequency of 2min and a spatial resolution of 1 km. Unlike physics-based models, MetNet-2 learns directly from data, bypassing the need for complex simulations.
+MetNet-2 is a probabilistic weather model based on deep neural networks that is a successor to MetNet (ADD REFERENCE 7).Unlike physics-based models, MetNet-2 learns directly from data, bypassing the need for complex simulations.
 
-![Types of Weather Models](/images/img2.png "Fig. 2| Types of Weather Models")
+![Types of Weather Models](/images/img2.png "Fig. 2:Types of Weather Models")
 
 ### Key Features of MetNet-2
 
-* **High Resolution and Frequency:**
+* **High Resolution and Frequency:**  MetNet-2 has frequency of 2min and a spatial resolution of 1 km. Whereas weather forecasts models typically have a grid resolution of 3–12 km and a frequency of one or more hours.
+
+* 
  
 
 ### MetNet-2 Architechture 
