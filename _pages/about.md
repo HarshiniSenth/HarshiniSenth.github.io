@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "MetNet-2 - A leap in Weather Prediction"
+title: "MetNet-2: A leap in Weather Prediction"
 author_profile: true
 redirect_from: 
   - /about/
@@ -58,10 +58,31 @@ $$
 P(r_{x}, y, t \,|\, t_{0}) = f(c_{x}, y, t_{0}, L)
 $$
 
+where r are rates of precipitation <br>
+x,y,t are the location and target time of the forecast <br>
+t0 is the time at which the forecast is made <br>
+c(x,y,t0) is the atmospheric context at time t0 relevant for location x,y <br>
+L = t − t0 is the lead time of the forecast <br>
 
+MetNet-2 aims to learn the function f that takes the atmospheric context (radar, satellite, weather model data etc.) at a given time t0 and the desired lead time L, and outputs the probability distribution P(rx,y,t|t0) over 512 categories of precipitation rates at each location (x, y) and future time t.
 
+###### Input Encoder
 
++ MetNet-2 processes input data from a large context area of 2048 km × 2048 km around the target location. This includes radar reflectivity, satellite imagery, and weather state data from NWP models. a larger input context is required for longer lead time forecasts to capture enough atmospheric information for accurate precipitation predictions. This context size allows MetNet-2 to effectively forecast up to 12 hours ahead by providing sufficient spatial context around the target area.
 
++ The context size 2048 km x 2048 km is downsampled via averaging by a
+factor of 4 in each spatial dimension, resulting in an input patch of
+512 × 512 positions. This downsampling maintains a sufficient amount of information in the context while substantially reducing the computational resources required to encode the input. However, there is a tradeoff. 
+
+![MetNet-2 context aggregation and architecture](/images/img3.png)
+*Fig. 3: MetNet-2 gathers more context surrounding the target patch, gradually expanding its coverage. The illustration depicts how the orthographic projection influences both the context and target, as they are projected onto Earth using an equirectangular projection.*
+
++ Furthermore, the input patches also has spatial dimensions and a time dimension in the form of multiple time slices
+
++ After padding
+and concatenation together along the depth axis, the input sets are
+embedded using a convolutional recurrent network(REFERENCE 10) in the time
+dimension(REFERENCE 7 ). (PARAHRASE)
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
