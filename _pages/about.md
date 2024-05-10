@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-In our daily lives, weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulationss used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
+Weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulationss used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
 
 ![Weather Forecast](/images/img1.jpeg "Fig 1:Weather forecast")
 *Fig 1: Weather Forecast*
@@ -64,6 +64,8 @@ t0 is the time at which the forecast is made <br>
 c(x,y,t0) is the atmospheric context at time t0 relevant for location x,y <br>
 L = t − t0 is the lead time of the forecast <br>
 
+
+
 MetNet-2 aims to learn the function f that takes the atmospheric context (radar, satellite, weather model data etc.) at a given time t0 and the desired lead time L, and outputs the probability distribution P(rx,y,t|t0) over 512 categories of precipitation rates at each location (x, y) and future time t.
 
 ###### Input Encoder
@@ -83,6 +85,9 @@ factor of 4 in each spatial dimension, resulting in an input patch of
 and concatenation together along the depth axis, the input sets are
 embedded using a convolutional recurrent network(REFERENCE 10) in the time
 dimension(REFERENCE 7 ). (PARAHRASE)
+
+###### Exponentially dilated convolutions
++ MetNet-2 uses two-dimensional convolutional residual blocks with exponentially increasing dilation factors (1, 2, 4, ..., 128). This allows each position in the layer representing the encoded context to connect with every other position, capturing the full context necessary for forecasting
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
