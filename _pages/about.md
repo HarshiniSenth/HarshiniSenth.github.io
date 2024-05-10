@@ -14,11 +14,20 @@ Efficient models based on deep neural networks
 represent a promising alternative framework for weather modeling (ADD REFERENCE HERE 5,6). 
 This blog post presents a neural network capable of predicting precipitation at a high resolution up to 12 h ahead.
 
-## Overview
+## The Need for Improved Short-Term Forecasting: 
 NWP models rely on complex mathematical equations and supercomputers to simulate the behavior of the atmosphere over time. The forecasts typically have a grid resolution of 3–12 km and a frequency of one or more hours. These models require significant computational resources to simulate the complex interactions of the atmosphere accurately. Running high-resolution models over large geographic areas and long forecast periods can be computationally intensive and time-consuming. These models are sensitive to errors in the initial conditions. Small inaccuracies in the observed data can lead to significant errors in the forecast. 
 
 Neural network-driven models present a hopeful option as they extract connections from data directly. They have the capability to produce forecasts more frequently and at finer resolutions, operating smoothly on parallel hardware within seconds. Moreover, neural networks inherently offer probabilistic forecasts, encompassing forecast fluctuations derived from the data.These properties can not only offer
 improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3)
+
+## Introducing MetNet-2: 
+MetNet-2 is a probabilistic weather model based on deep neural networks that is a successor to MetNet (ADD REFERENCE 7). This model has frequency of 2min and a spatial resolution of 1 km. Unlike physics-based models, MetNet-2 learns directly from data, bypassing the need for complex simulations.
+
+![Types of Weather Models](/images/img2.png "Types of Weather Models")
+
+
+
+
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
 
