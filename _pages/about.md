@@ -9,7 +9,7 @@ redirect_from:
 In our daily lives, weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulations used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
 
 ![Weather Forecast](/images/img1.jpeg "Fig 1:Weather forecast")
-
+*Fig 1: Weather Forecast*
 
 Efficient models based on deep neural networks
 represent a promising alternative framework for weather modeling (ADD REFERENCE HERE 5,6). 
@@ -25,7 +25,7 @@ improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3
 MetNet-2 is a probabilistic weather model based on deep neural networks that is a successor to MetNet (ADD REFERENCE 7).Unlike physics-based models, MetNet-2 learns directly from data, bypassing the need for complex simulations.
 
 ![Types of Weather Models](/images/img2.png)
-*Fig. 2:Types of Weather Models*
+*Fig. 2: Types of Weather Models (WRITE THE DESCRIPTION IN DETAIL)*
 
 ### Key Features of MetNet-2
 
@@ -37,8 +37,8 @@ MetNet-2 is a probabilistic weather model based on deep neural networks that is 
  
 
 ### MetNet-2 Architechture 
-#### Input Encoder
 
+#### Framework
 
 
 
