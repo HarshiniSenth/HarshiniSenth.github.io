@@ -52,7 +52,11 @@ observations that result from the data assimilation process in the
 NWPmodel HRRR is used.Furthermore, space-time coordinates encompassing longitude, latitude, elevation, and forecast time, along with optical satellite images os also provided.
 
 ##### Model Architecture and Training
+MetNet- 2 uses a probabilistic formulation for precipitation forecasting
 
+$$
+P(r_{x}, y, t \,|\, t_{0}) = f(c_{x}, y, t_{0}, L)
+$$
 
 
 
