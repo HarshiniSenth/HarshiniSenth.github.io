@@ -24,15 +24,16 @@ improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3
 ## Introducing MetNet-2: 
 MetNet-2 is a probabilistic weather model based on deep neural networks that is a successor to MetNet (ADD REFERENCE 7).Unlike physics-based models, MetNet-2 learns directly from data, bypassing the need for complex simulations.
 
-![Types of Weather Models](/images/img2.png "Fig. 2:Types of Weather Models")
+![Types of Weather Models](/images/img2.png)
+*Fig. 2:Types of Weather Models*
 
 ### Key Features of MetNet-2
 
-* **High Resolution and Frequency:**MetNet-2 has frequency of 2min and a spatial resolution of 1 km. Whereas weather forecasts models typically have a grid resolution of 3–12 km and a frequency of one or more hours.
+* **High Resolution and Frequency:** MetNet-2 has frequency of 2min and a spatial resolution of 1 km. Whereas weather forecasts models typically have a grid resolution of 3–12 km and a frequency of one or more hours.
 
-* **Large Input Context:**It processes data from a 2048 km x 2048 km area to ensure comprehensive coverage and accuracy.
+* **Large Input Context:** It processes data from a 2048 km x 2048 km area to ensure comprehensive coverage and accuracy.
 
-* **Avanced Neural Architecture:**The model incorporates novel neural network elements like a context-aggregating module, which doubles the receptive field with each layer, enhancing its ability to make precise predictions over larger areas, strong lead time conditioning scheme and a model parallel training setup utilizing multiple chips for increased memory and parallel computation (ADD REFERENCE OF THIS PAPER)
+* **Avanced Neural Architecture:** The model incorporates novel neural network elements like a context-aggregating module, which doubles the receptive field with each layer, enhancing its ability to make precise predictions over larger areas, strong lead time conditioning scheme and a model parallel training setup utilizing multiple chips for increased memory and parallel computation (ADD REFERENCE OF THIS PAPER)
  
 
 ### MetNet-2 Architechture 
