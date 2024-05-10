@@ -8,7 +8,8 @@ redirect_from:
 ---
 In our daily lives, weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulations used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
 
-![Weather Forecast](/images/img1.jpeg "Fig 1:Weather Forecast")
+![Weather Forecast](/images/img1.jpeg "Fig 1:Weather forecast")
+
 
 Efficient models based on deep neural networks
 represent a promising alternative framework for weather modeling (ADD REFERENCE HERE 5,6). 
@@ -27,9 +28,11 @@ MetNet-2 is a probabilistic weather model based on deep neural networks that is 
 
 ### Key Features of MetNet-2
 
-* **High Resolution and Frequency:**  MetNet-2 has frequency of 2min and a spatial resolution of 1 km. Whereas weather forecasts models typically have a grid resolution of 3–12 km and a frequency of one or more hours.
+* **High Resolution and Frequency:**MetNet-2 has frequency of 2min and a spatial resolution of 1 km. Whereas weather forecasts models typically have a grid resolution of 3–12 km and a frequency of one or more hours.
 
-* 
+* **Large Input Context:**It processes data from a 2048 km x 2048 km area to ensure comprehensive coverage and accuracy.
+
+* **Avanced Neural Architecture:**The model incorporates novel neural network elements like a context-aggregating module, which doubles the receptive field with each layer, enhancing its ability to make precise predictions over larger areas, strong lead time conditioning scheme and a model parallel training setup utilizing multiple chips for increased memory and parallel computation (ADD REFERENCE OF THIS PAPER)
  
 
 ### MetNet-2 Architechture 
