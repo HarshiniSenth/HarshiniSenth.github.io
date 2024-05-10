@@ -37,8 +37,9 @@ MetNet-2 is a probabilistic weather model based on deep neural networks that is 
  
 
 ### MetNet-2 Architechture 
-
+(ADD SOME BLUFF HERE)
 #### Framework
+
 
 
 

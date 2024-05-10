@@ -5,9 +5,7 @@ Name Name:
   uri         : "HarshiniSenth.github.io"
   email       : "st185195@stud.uni-stuttgart.de"
   bio         : "Masters student at universitaet Stuttgart"
-  avatar      : "Passport_Photo.jpeg"
-  image_width: 100   # Specify the width of the image
-  image_height: 100
+  avatar      : "photo_resize.jpeg"
   twitter     : "name"
   google_plus : "Name"
 
