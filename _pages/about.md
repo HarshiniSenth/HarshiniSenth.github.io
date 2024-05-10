@@ -37,8 +37,21 @@ MetNet-2 is a probabilistic weather model based on deep neural networks that is 
  
 
 ### MetNet-2 Architechture 
-This framework is designed to leverage the capabilities of neural networks for weather forecasting.
 #### Framework
+This framework is designed to leverage the capabilities of neural networks for weather forecasting.
+
+##### Data Collection and Preparation
+MetNet-2 model needs initial state of the atmosphere as the basis of forecast. The Data is obtained from sensors located in weather stations, sattelites and ground radars. Radars estimate the reflectivity which provide estimates of precipitation every few minutes with a spatial resolution of 1 km × 1 km.
+**Precipitation Measures used:** Two main types of measures used are instantaneous precipitation, obtained from radar reflectivity every two minutes, and hourly cumulative precipitation, indicating the total precipitation over the past hour. The radar measurements are supplemented by rain gauges at weather stations to enhance the accuracy and reliability of the data.
+
+
+**Assimilation Features:**The Radar does not provide information on pressure, temperature and wind velocity and direction. To incorporate these infomation in the model, available set of atmospheric
+observations that result from the data assimilation process in the
+NWPmodel HRRR is used.Furthermore, space-time coordinates encompassing longitude, latitude, elevation, and forecast time, along with optical satellite images os also provided.
+
+##### Model Architecture and Training
+
+
 
 
 
