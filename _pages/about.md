@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "Deep learning for twelve hour precipitation forecasts"
+title: "MetNet-2 - A leap in Weather Prediction"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-In our daily lives, weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulations used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
+In our daily lives, weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulationss used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
 
 ![Weather Forecast](/images/img1.jpeg "Fig 1:Weather forecast")
 *Fig 1: Weather Forecast*
@@ -42,6 +42,8 @@ This framework is designed to leverage the capabilities of neural networks for w
 
 ##### Data Collection and Preparation
 MetNet-2 model needs initial state of the atmosphere as the basis of forecast. The Data is obtained from sensors located in weather stations, sattelites and ground radars. Radars estimate the reflectivity which provide estimates of precipitation every few minutes with a spatial resolution of 1 km × 1 km.
+
+
 **Precipitation Measures used:** Two main types of measures used are instantaneous precipitation, obtained from radar reflectivity every two minutes, and hourly cumulative precipitation, indicating the total precipitation over the past hour. The radar measurements are supplemented by rain gauges at weather stations to enhance the accuracy and reliability of the data.
 
 
