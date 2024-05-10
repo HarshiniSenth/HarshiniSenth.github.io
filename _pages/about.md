@@ -18,8 +18,6 @@ This blog post presents a neural network capable of predicting precipitation at 
 ## The Need for Improved Short-Term Forecasting: 
 NWP models rely on complex mathematical equations and supercomputers to simulate the behavior of the atmosphere over time.These models require significant computational resources to simulate the complex interactions of the atmosphere accurately. Running high-resolution models over large geographic areas and long forecast periods can be computationally intensive and time-consuming. These models are sensitive to errors in the initial conditions. Small inaccuracies in the observed data can lead to significant errors in the forecast. 
 
-![GIF](https://blogger.googleusercontent.com/img/a/AVvXsEhpJxLN_5CuSyz_gt-xrDIoLyi1HQ0PdAYHQgomGhbABA-qbDAcevBYsq0XcgpozNP3e_UWvwmgoUOC6pxv5vjKnDM4Wdn8zy6GYv3jVe3iccXNKh_-x4V0RAFugPfroW3FHmFcuQmLTzaNZGDultf0a72BrweNciUhWKSzYcgl1buu0gyg7BrV7k--WA=s1600)
-
 
 Neural network-driven models present a hopeful option as they extract connections from data directly. They have the capability to produce forecasts more frequently and at finer resolutions, operating smoothly on parallel hardware within seconds. Moreover, neural networks inherently offer probabilistic forecasts, encompassing forecast fluctuations derived from the data.These properties can not only offer
 improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3)
@@ -38,6 +36,9 @@ MetNet-2 is a probabilistic weather model based on deep neural networks that is 
 
 * **Avanced Neural Architecture:** The model incorporates novel neural network elements like a context-aggregating module, which doubles the receptive field with each layer, enhancing its ability to make precise predictions over larger areas, strong lead time conditioning scheme and a model parallel training setup utilizing multiple chips for increased memory and parallel computation (ADD REFERENCE OF THIS PAPER)
  
+
+![GIF](https://blogger.googleusercontent.com/img/a/AVvXsEhpJxLN_5CuSyz_gt-xrDIoLyi1HQ0PdAYHQgomGhbABA-qbDAcevBYsq0XcgpozNP3e_UWvwmgoUOC6pxv5vjKnDM4Wdn8zy6GYv3jVe3iccXNKh_-x4V0RAFugPfroW3FHmFcuQmLTzaNZGDultf0a72BrweNciUhWKSzYcgl1buu0gyg7BrV7k--WA=s1600)
+*Fig 2: Illustration of the computation through MetNet-2. As the computation progresses, the network processes an ever larger context from the input and makes a probabilistic forecast of the likely future weather conditions. (ADD REF)*
 
 ### MetNet-2 Architechture 
 #### Framework
@@ -65,9 +66,7 @@ where r are rates of precipitation <br>
 x,y,t are the location and target time of the forecast <br>
 t0 is the time at which the forecast is made <br>
 c(x,y,t0) is the atmospheric context at time t0 relevant for location x,y <br>
-L = t − t0 is the lead time of the forecast 
-
-
+L = t − t0 is the lead time of the forecast <br>
 MetNet-2 aims to learn the function f that takes the atmospheric context (radar, satellite, weather model data etc.) at a given time t0 and the desired lead time L, and outputs the probability distribution P(rx,y,t|t0) over 512 categories of precipitation rates at each location (x, y) and future time t.
 
 ###### Input Encoder
