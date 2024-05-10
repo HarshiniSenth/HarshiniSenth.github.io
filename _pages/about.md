@@ -62,8 +62,7 @@ where r are rates of precipitation <br>
 x,y,t are the location and target time of the forecast <br>
 t0 is the time at which the forecast is made <br>
 c(x,y,t0) is the atmospheric context at time t0 relevant for location x,y <br>
-L = t − t0 is the lead time of the forecast <br>
-
+L = t − t0 is the lead time of the forecast 
 
 
 MetNet-2 aims to learn the function f that takes the atmospheric context (radar, satellite, weather model data etc.) at a given time t0 and the desired lead time L, and outputs the probability distribution P(rx,y,t|t0) over 512 categories of precipitation rates at each location (x, y) and future time t.
