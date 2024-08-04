@@ -6,10 +6,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Weather forecasting has always been a challenging and computationally demanding process, typically relying on physics-based models and powerful computers. However, advancements in deep learning have enabled more precise and effective weather forecasts. The creation of the MetNet series, including MetNet-1, MetNet-2, and MetNet-3, signifies a major advancement in this area by providing detailed predictions of precipitation and other weather variables.
+![GIF](https://blogger.googleusercontent.com/img/a/AVvXsEhpJxLN_5CuSyz_gt-xrDIoLyi1HQ0PdAYHQgomGhbABA-qbDAcevBYsq0XcgpozNP3e_UWvwmgoUOC6pxv5vjKnDM4Wdn8zy6GYv3jVe3iccXNKh_-x4V0RAFugPfroW3FHmFcuQmLTzaNZGDultf0a72BrweNciUhWKSzYcgl1buu0gyg7BrV7k--WA=s1600)
 
-![Weather Forecast](/images/img1.jpeg "Fig 1:Weather forecast")
-*Fig 1: Weather Forecast*
+Weather forecasting has always been a challenging and computationally demanding process, typically relying on physics-based models and powerful computers. However, advancements in deep learning have enabled more precise and effective weather forecasts. The creation of the MetNet series, including MetNet-1, MetNet-2, and MetNet-3, signifies a major advancement in this area by providing detailed predictions of precipitation and other weather variables.
 
 ## MetNet-1: The Groundbreaker
 MetNet-1 marked a significant milestone in weather forecasting by introducing a deep learning approach to predict precipitation up to 8 hours ahead. The model utilized radar and satellite images as inputs, transforming these observations into probabilistic forecasts.
@@ -20,6 +19,9 @@ MetNet-1 marked a significant milestone in weather forecasting by introducing a 
 *	**Output:** Probabilistic precipitation forecasts.
 *	**Architecture:** Focused on capturing spatial and temporal patterns.
 MetNet-1's ability to provide probabilistic forecasts was a major step forward, offering a level of detail and accuracy that traditional models struggled to achieve in short-term predictions.
+
+![picture 1](/images/Picture2.png)
+*FIG.1: Visualization of ground truth MRMS and predictions from MetNet-1 and HRRR at a 1 mm/h precipitation rate threshold.*
 
 Neural network-driven models present a hopeful option as they extract connections from data directly. They have the capability to produce forecasts more frequently and at finer resolutions, operating smoothly on parallel hardware within seconds. Moreover, neural networks inherently offer probabilistic forecasts, encompassing forecast fluctuations derived from the data.These properties can not only offer
 improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3)
