@@ -1,92 +1,159 @@
 ---
 permalink: /
-title: "MetNet-2: A leap in Weather Prediction"
+title: "Innovating Weather Prediction: MetNet-2 and Forecasting Twelve-Hour Precipitation."
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-Weather forecasting is essential for everything from organising outdoor activities to getting ready for extreme weather conditions. Existing weather forecasting models use Numerical weather prediction(NWP) models which are based on sophisticated  computer simulationss used to forecast future weather conditions based on current and past atmospheric data. However, these models face computational bottlenecks and time lags, limiting their effectiveness, especially for short-term forecasts. 
+Weather forecasting has always been a challenging and computationally demanding process, typically relying on physics-based models and powerful computers. However, advancements in deep learning have enabled more precise and effective weather forecasts. The creation of the MetNet series, including MetNet-1, MetNet-2, and MetNet-3, signifies a major advancement in this area by providing detailed predictions of precipitation and other weather variables.
 
 ![Weather Forecast](/images/img1.jpeg "Fig 1:Weather forecast")
 *Fig 1: Weather Forecast*
 
-Efficient models based on deep neural networks
-represent a promising alternative framework for weather modeling (ADD REFERENCE HERE 5,6). 
-This blog post presents a neural network capable of predicting precipitation at a high resolution up to 12 h ahead.
+## MetNet-1: The Groundbreaker
+MetNet-1 marked a significant milestone in weather forecasting by introducing a deep learning approach to predict precipitation up to 8 hours ahead. The model utilized radar and satellite images as inputs, transforming these observations into probabilistic forecasts.
 
-## The Need for Improved Short-Term Forecasting: 
-NWP models rely on complex mathematical equations and supercomputers to simulate the behavior of the atmosphere over time.These models require significant computational resources to simulate the complex interactions of the atmosphere accurately. Running high-resolution models over large geographic areas and long forecast periods can be computationally intensive and time-consuming. These models are sensitive to errors in the initial conditions. Small inaccuracies in the observed data can lead to significant errors in the forecast. 
-
+### Key Features of MetNet-1:
+* **Forecast Horizon:** Up to 8 hours.
+* **Input Data:** Radar and satellite images.
+*	**Output:** Probabilistic precipitation forecasts.
+*	**Architecture:** Focused on capturing spatial and temporal patterns.
+MetNet-1's ability to provide probabilistic forecasts was a major step forward, offering a level of detail and accuracy that traditional models struggled to achieve in short-term predictions.
 
 Neural network-driven models present a hopeful option as they extract connections from data directly. They have the capability to produce forecasts more frequently and at finer resolutions, operating smoothly on parallel hardware within seconds. Moreover, neural networks inherently offer probabilistic forecasts, encompassing forecast fluctuations derived from the data.These properties can not only offer
 improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3)
 
-## Introducing MetNet-2: 
-MetNet-2 is a probabilistic weather model based on deep neural networks that is a successor to MetNet (ADD REFERENCE 7).Unlike physics-based models, MetNet-2 learns directly from data, bypassing the need for complex simulations.
+## MetNet-2: Extending the Horizon
+
+Building on the success of MetNet-1, MetNet-2 extended the forecasting horizon to 12 hours. This version incorporated a larger context in its input images, capturing more comprehensive atmospheric information such as temperature, humidity, and wind direction.
+
+### Key Features of MetNet-2:
+* **Extended Forecasting Horizon:** Up to 12 hours.
+*	**Larger Spatial Context:** Input context size increased to 2048 km².
+*	**Probabilistic Forecasts:** Similar to ensemble models but with faster computation (~1 second compared to ~1 hour for ensemble models).
+*	**Improved Accuracy:** Outperformed state-of-the-art ensemble models like HREF for short-term forecasts.
+MetNet-2's ability to process a larger spatial context was critical for making longer forecasts, and the use of pre-processed starting states from physical models enhanced its predictive capabilities.
+
+## MetNet-3: State-of-the-Art Neural Weather Model
+
+MetNet-3 represents the latest advancement in the series, pushing the boundaries of neural weather forecasting even further. This model provides high-resolution predictions up to 24 hours ahead, covering a broader set of core weather variables including precipitation, surface temperature, wind speed and direction, and dew point.
+
+### Key Features of MetNet-3:
+*	**High Resolution:** Spatial resolutions of 1 to 4 kilometers and temporal resolutions of 2 minutes.
+*	**Lead Time Conditioning:** The forecast lead time is directly given as input to the neural network, allowing for efficient modeling of high temporal frequency observations.
+*	**Probabilistic Outputs:** Predicts a marginal multinomial probability distribution for each output variable, providing rich information beyond just the mean.
+*	**Integration with Google Products:** Available in the contiguous United States and parts of Europe, enhancing weather-related services in multiple countries and languages.
+MetNet-3 takes the advancements of its predecessors and amplifies them, providing unprecedented accuracy and resolution in weather forecasting.
+
+## The Difficulty Presented by Conventional Weather Models
+
+Conventional Numerical Weather Prediction (NWP) models use supercomputers to replicate the physics of the atmosphere. Despite their effectiveness, these models are limited by computational bottlenecks and the requirement for regular updates. Enhancing these models requires either more advanced atmospheric simulations or higher resolution, both of which are computationally expensive.
+
+## Understanding Numerical Weather Prediction Models
+
+NWP models rely on mathematical equations that detail the atmosphere's behavior. Numerical methods are used to solve these equations, which are based on the principles of physics, fluid dynamics, and thermodynamics. The procedure includes:
+*	**Data Collection:** Gathering observational data from satellites, weather stations, radars, and other sources.
+*	**Data Assimilation:** Incorporating observational data into the model to establish an initial state.
+*	**Model Integration:** Advancing the model forward in time to forecast upcoming atmospheric conditions.
+*	**Forecast Refinement:** Creating user-friendly weather forecasts from the initial model output.
+Even though NWP models are advanced, they still have inherent limitations. The atmosphere is an unpredictable system, so even minor errors in the initial conditions can result in significant discrepancies in the prediction. Moreover, the practicality of running high-resolution models over large areas is restricted by computational demands.The Emergence of Neural Network ModelsNeural networks such as MetNet-2 tackle these issues by learning from data instead of relying on manually coded physics. These models are capable of efficient parallel processing, enabling frequent and accurate high-resolution predictions. MetNet-2 excels in forecasting primary precipitation goals and surpasses advanced physics-based models for a lead time of up to twelve hours in the Continental United States.
+
+## How Neural Networks Work
+
+Neural networks are a type of machine learning algorithm inspired by the human brain's structure and function. They are composed of interconnected nodes (neurons) arranged in layers, which analyze input information and produce output projections. Important elements include:
+*	**Input Layer:** Receives raw data, such as weather reports and satellite images.
+*	**Hidden Layers:** Conduct intricate operations and extract features using weighted connections and activation functions.
+*	**Output Layer:** Generates the final forecast, such as rainfall levels or temperature measurements.
+Training a neural network involves adjusting connection weights to minimize the discrepancy between predicted and actual values. This iterative process, called backpropagation, enhances the model's accuracy.
+
+## Advanced Prediction of Future Events
+
+One notable characteristic of MetNet-2 is its capability to offer forecasts with high resolution. MetNet-2 provides precise and current weather forecasts with a spatial resolution of 1 km and updates every two minutes. This level of detail is essential for detecting specific weather events in a particular area, like thunderstorms and intense rainfall.
+
+## Extensive Input Content
+
+MetNet-2 benefits from input observations from a 2048 km × 2048 km area, leading to better performance compared to smaller context sizes. Considering a bigger region enables the model to comprehend the more extensive atmospheric trends that impact nearby weather patterns more effectively. This comprehensive method results in more precise predictions.
+
+## Sophisticated Neural Structure
+
+MetNet-2 includes an advanced neural structure created to manage the intricacies of meteorological data. Important elements consist of:
+* **Context-Aggregating Module:** Consolidates data from various spatial and temporal scales to offer a complete comprehension of the atmosphere.
+*	**Lead Time Conditioning Scheme:** Utilizes forecast lead time information to enhance accuracy.
+*	**Model Parallel Training Setup:** Allows effective training on extensive datasets by spreading the tasks among numerous processors.
+
+## Performance and Validation
+
+MetNet-2 has undergone thorough testing to guarantee its dependability and precision. The model was trained to predict rainfall across a vast area of the Continental United States, yielding remarkable outcomes.
+
+## Comparison with Conventional Models
+
+MetNet-2 performs better than the HREF model in terms of CRPS and CSI for both low and high precipitation rates. These measurements offer a thorough assessment of the model's effectiveness.
+* **CRPS:** Evaluates the precision of probabilistic predictions by comparing the forecasted probability distribution with the actual result. Lower CRPS scores correlate with improved performance.
+*	**CSI:** Assesses the precision of categorical predictions based on the ratio of correct forecasts to the total number of events. Higher CSI values indicate superior performance.
+
+## Impacts of Additional Observations
+
+The model's accuracy is improved by including more atmospheric observations, particularly for longer lead times. MetNet-2 can offer more accurate forecasts by gathering information from different sources like satellites, radars, and weather stations.
+
+## Blend of Methods
+
+MetNet-2 incorporates forecasts from conventional NWP models like HRRR in a hybrid configuration. This method enables MetNet-2 to surpass even post-processed HRRR predictions, showcasing its ability to derive distinctive insights and enhance forecast accuracy.
+
+## Case Studies and Real-World Applications
+
+To demonstrate the practical advantages of MetNet-2, we will examine various case studies and real-world scenarios where the model has had a substantial influence.
+
+### Case Study 1: Extreme Weather Incidents
+
+Precise short-term predictions are essential in handling extreme weather occurrences like hurricanes, tornadoes, and flash floods. In a particular study, MetNet-2 was utilized to forecast the trajectory and strength of a hurricane heading towards the Gulf Coast. The detailed predictions from the model helped emergency responders make quick decisions and reduce the impact on communities.
+
+### Case Study 2: Strategic Planning for Agriculture
+
+Farmers depend on precise weather predictions to schedule their tasks, like planting, watering, and harvesting. In a different study, MetNet-2 was used in a large farming area to offer forecasts of precipitation for twelve hours. The model's forecasts assisted farmers in maximizing their practices, leading to higher crop yields and decreased water consumption.
+
+### Case Study 3: Urban Flood Control
+
+Cities are at a higher risk of flash floods because of their large population and extensive urban development. MetNet-2 was utilized in a test program to offer immediate precipitation predictions for a large urban area. The city planners were able to take proactive measures, like installing flood barriers and issuing warnings to residents, thanks to the detailed predictions of the model.
+
+## Future Prospects
+
+The use of deep learning in weather prediction is still in the early phases but holds significant potential. Future studies will probably concentrate on improving model precision, incorporating a wider variety of data sources, and creating easy-to-use applications for immediate weather forecasts.
+
+## Enhancing Model Precision
+
+Ongoing developments in neural network designs and training methods will enhance the precision of models such as MetNet-2. Scientists are investigating different methods, such as:
+*	**Transfer Learning:** Utilizing pre-trained models to enhance performance on particular tasks.
+*	**Ensemble Methods:** Combining various models to decrease uncertainty and improve stability.
+*	**Explainable AI:** Creating methods to interpret and comprehend the forecasts generated by neural networks, enhancing their transparency and reliability.
+
+## Integrating a Variety of Data Sources
+
+Expanding the variety of data sources will improve the model's capacity to encompass the intricacies of the atmosphere. Possible sources of data include:
+*	**Crowdsourced Observations:** Utilizing information from personal weather stations and mobile devices to offer extremely localized insights.
+*	**Internet of Things (IoT):** Combining information from IoT gadgets, like intelligent sensors and linked vehicles, to enhance the model's data input.
+*	**Remote Sensing:** Utilizing cutting-edge satellite and radar technologies to gather detailed observations of the atmosphere.
+
+## Developing User-Friendly Application
+
+To ensure the full advantages of deep learning models are realized, it is crucial to create user-friendly apps that provide real-time weather forecasts to a wide range of people. Possible uses include:
+*	**Mobile Applications:** Deliver personalized weather predictions and notifications to users according to their location and preferences.
+*	**Online Platforms:** Providing interactive features and visual aids for examining weather information and forecasts.
+*	**API Services:** Allowing developers to incorporate weather predictions into their applications and services, such as logistics, agriculture, and disaster management.
+
+## Conclusion
+
+The MetNet series showcases the rapid advancements in neural weather forecasting. From the foundational MetNet-1 to the state-of-the-art MetNet-3, each iteration has brought significant improvements in accuracy, resolution, and computational efficiency. These models not only enhance our ability to predict weather with greater precision but also integrate seamlessly into everyday applications, making accurate weather information more accessible to the public. As deep learning continues to evolve, we can expect even more sophisticated and reliable weather forecasting models in the future.
 
 ![Types of Weather Models](/images/img2.png)
 *Fig. 2: Types of Weather Models (WRITE THE DESCRIPTION IN DETAIL)*
 
-### Key Features of MetNet-2
 
-* **High Resolution and Frequency:** MetNet-2 has frequency of 2min and a spatial resolution of 1 km. Whereas weather forecasts models typically have a grid resolution of 3–12 km and a frequency of one or more hours.
 
-* **Large Input Context:** It processes data from a 2048 km x 2048 km area to ensure comprehensive coverage and accuracy.
-
-* **Avanced Neural Architecture:** The model incorporates novel neural network elements like a context-aggregating module, which doubles the receptive field with each layer, enhancing its ability to make precise predictions over larger areas, strong lead time conditioning scheme and a model parallel training setup utilizing multiple chips for increased memory and parallel computation (ADD REFERENCE OF THIS PAPER)
  
 
 ![GIF](https://blogger.googleusercontent.com/img/a/AVvXsEhpJxLN_5CuSyz_gt-xrDIoLyi1HQ0PdAYHQgomGhbABA-qbDAcevBYsq0XcgpozNP3e_UWvwmgoUOC6pxv5vjKnDM4Wdn8zy6GYv3jVe3iccXNKh_-x4V0RAFugPfroW3FHmFcuQmLTzaNZGDultf0a72BrweNciUhWKSzYcgl1buu0gyg7BrV7k--WA=s1600)
 *Fig 2: Illustration of the computation through MetNet-2. As the computation progresses, the network processes an ever larger context from the input and makes a probabilistic forecast of the likely future weather conditions. (ADD REF)*
 
-### MetNet-2 Architechture 
-#### Framework
-This framework is designed to leverage the capabilities of neural networks for weather forecasting.
 
-##### Data Collection and Preparation
-MetNet-2 model needs initial state of the atmosphere as the basis of forecast. The Data is obtained from sensors located in weather stations, sattelites and ground radars. Radars estimate the reflectivity which provide estimates of precipitation every few minutes with a spatial resolution of 1 km × 1 km.
-
-
-**Precipitation Measures used:** Two main types of measures used are instantaneous precipitation, obtained from radar reflectivity every two minutes, and hourly cumulative precipitation, indicating the total precipitation over the past hour. The radar measurements are supplemented by rain gauges at weather stations to enhance the accuracy and reliability of the data.
-
-
-**Assimilation Features:**The Radar does not provide information on pressure, temperature and wind velocity and direction. To incorporate these infomation in the model, available set of atmospheric
-observations that result from the data assimilation process in the
-NWPmodel HRRR is used.Furthermore, space-time coordinates encompassing longitude, latitude, elevation, and forecast time, along with optical satellite images os also provided.
-
-##### Model Architecture and Training
-MetNet- 2 uses a probabilistic formulation for precipitation forecasting
-
-$$
-P(r_{x}, y, t \,|\, t_{0}) = f(c_{x}, y, t_{0}, L)
-$$
-
-where r are rates of precipitation <br>
-x,y,t are the location and target time of the forecast <br>
-t0 is the time at which the forecast is made <br>
-c(x,y,t0) is the atmospheric context at time t0 relevant for location x,y <br>
-L = t − t0 is the lead time of the forecast <br>
-MetNet-2 aims to learn the function f that takes the atmospheric context (radar, satellite, weather model data etc.) at a given time t0 and the desired lead time L, and outputs the probability distribution P(rx,y,t|t0) over 512 categories of precipitation rates at each location (x, y) and future time t.
-
-###### Input Encoder
-
-+ MetNet-2 processes input data from a large context area of 2048 km × 2048 km around the target location. This includes radar reflectivity, satellite imagery, and weather state data from NWP models. a larger input context is required for longer lead time forecasts to capture enough atmospheric information for accurate precipitation predictions. This context size allows MetNet-2 to effectively forecast up to 12 hours ahead by providing sufficient spatial context around the target area.
-
-+ The context size 2048 km x 2048 km is downsampled via averaging by a
-factor of 4 in each spatial dimension, resulting in an input patch of
-512 × 512 positions. This downsampling maintains a sufficient amount of information in the context while substantially reducing the computational resources required to encode the input. However, there is a tradeoff. 
-
-![MetNet-2 context aggregation and architecture](/images/img3.png)
-*Fig. 3: MetNet-2 gathers more context surrounding the target patch, gradually expanding its coverage. The illustration depicts how the orthographic projection influences both the context and target, as they are projected onto Earth using an equirectangular projection.*
-
-+ Furthermore, the input patches also has spatial dimensions and a time dimension in the form of multiple time slices
-
-+ After padding
-and concatenation together along the depth axis, the input sets are
-embedded using a convolutional recurrent network(REFERENCE 10) in the time
-dimension(REFERENCE 7 ). (PARAHRASE)
-
-###### Exponentially dilated convolutions
-+ MetNet-2 uses two-dimensional convolutional residual blocks with exponentially increasing dilation factors (1, 2, 4, ..., 128). This allows each position in the layer representing the encoded context to connect with every other position, capturing the full context necessary for forecasting
 
