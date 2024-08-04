@@ -21,10 +21,7 @@ MetNet-1 marked a significant milestone in weather forecasting by introducing a 
 MetNet-1's ability to provide probabilistic forecasts was a major step forward, offering a level of detail and accuracy that traditional models struggled to achieve in short-term predictions.
 
 ![picture 1](/images/Picture2.png)
-*FIG.1: Visualization of ground truth MRMS and predictions from MetNet-1 and HRRR at a 1 mm/h precipitation rate threshold.*
-
-Neural network-driven models present a hopeful option as they extract connections from data directly. They have the capability to produce forecasts more frequently and at finer resolutions, operating smoothly on parallel hardware within seconds. Moreover, neural networks inherently offer probabilistic forecasts, encompassing forecast fluctuations derived from the data.These properties can not only offer
-improved forecasts, but also frequent and personalized forecasts(ADD REFERENCE 3)
+*Fig.1: Visualization of ground truth MRMS and predictions from MetNet-1 and HRRR at a 1 mm/h precipitation rate threshold.*
 
 ## MetNet-2: Extending the Horizon
 
@@ -37,6 +34,9 @@ Building on the success of MetNet-1, MetNet-2 extended the forecasting horizon t
 *	**Improved Accuracy:** Outperformed state-of-the-art ensemble models like HREF for short-term forecasts.
 MetNet-2's ability to process a larger spatial context was critical for making longer forecasts, and the use of pre-processed starting states from physical models enhanced its predictive capabilities.
 
+![picture 2](/images/Picture3.png)
+*Fig.2: Steps in a MetNet-2 forecast and in a physics-based ensemble.*
+
 ## MetNet-3: State-of-the-Art Neural Weather Model
 
 MetNet-3 represents the latest advancement in the series, pushing the boundaries of neural weather forecasting even further. This model provides high-resolution predictions up to 24 hours ahead, covering a broader set of core weather variables including precipitation, surface temperature, wind speed and direction, and dew point.
@@ -48,9 +48,15 @@ MetNet-3 represents the latest advancement in the series, pushing the boundaries
 *	**Integration with Google Products:** Available in the contiguous United States and parts of Europe, enhancing weather-related services in multiple countries and languages.
 MetNet-3 takes the advancements of its predecessors and amplifies them, providing unprecedented accuracy and resolution in weather forecasting.
 
+![picture 3](/images/Picture4.gif)
+*Fig.3: the formation of a new large precipitation pattern in the central US; it is not just forecasting of existing patterns.Top: Ground truth, Bottom: Probability map as predicted by MetNet-3*
+
 ## The Difficulty Presented by Conventional Weather Models
 
 Conventional Numerical Weather Prediction (NWP) models use supercomputers to replicate the physics of the atmosphere. Despite their effectiveness, these models are limited by computational bottlenecks and the requirement for regular updates. Enhancing these models requires either more advanced atmospheric simulations or higher resolution, both of which are computationally expensive.
+
+![picture 4](/images/Picture5.gif)
+*Fig.4: Example ground truth image: Instantaneous precipitation (mm/hr) based on radar (MRMS) capturing a 12 hours-long progression*
 
 ## Understanding Numerical Weather Prediction Models
 
@@ -60,6 +66,9 @@ NWP models rely on mathematical equations that detail the atmosphere's behavior.
 *	**Model Integration:** Advancing the model forward in time to forecast upcoming atmospheric conditions.
 *	**Forecast Refinement:** Creating user-friendly weather forecasts from the initial model output.
 Even though NWP models are advanced, they still have inherent limitations. The atmosphere is an unpredictable system, so even minor errors in the initial conditions can result in significant discrepancies in the prediction. Moreover, the practicality of running high-resolution models over large areas is restricted by computational demands.The Emergence of Neural Network ModelsNeural networks such as MetNet-2 tackle these issues by learning from data instead of relying on manually coded physics. These models are capable of efficient parallel processing, enabling frequent and accurate high-resolution predictions. MetNet-2 excels in forecasting primary precipitation goals and surpasses advanced physics-based models for a lead time of up to twelve hours in the Continental United States.
+
+![picture 5](/images/Picture6.png)
+*Fig.5: Properties of NWP and NWMs. Left: NWP performs a deterministic physical simulation starting from the initial conditions. The predictive uncertainty is estimated from an ensemble of predictions each run with slightly different initial conditions. Right: The NWM treats the current observations as direct inputs to a DNN, directly estimating the distribution over future conditions p(y|x).*
 
 ## How Neural Networks Work
 
@@ -76,6 +85,10 @@ One notable characteristic of MetNet-2 is its capability to offer forecasts with
 ## Extensive Input Content
 
 MetNet-2 benefits from input observations from a 2048 km × 2048 km area, leading to better performance compared to smaller context sizes. Considering a bigger region enables the model to comprehend the more extensive atmospheric trends that impact nearby weather patterns more effectively. This comprehensive method results in more precise predictions.
+
+
+![picture 6](/images/Picture7.png)
+*Fig.6: MetNet-2 context aggregation and architecture. Diagrams of various aspects of the MetNet-2 model*
 
 ## Sophisticated Neural Structure
 
@@ -94,6 +107,9 @@ MetNet-2 performs better than the HREF model in terms of CRPS and CSI for both l
 * **CRPS:** Evaluates the precision of probabilistic predictions by comparing the forecasted probability distribution with the actual result. Lower CRPS scores correlate with improved performance.
 *	**CSI:** Assesses the precision of categorical predictions based on the ratio of correct forecasts to the total number of events. Higher CSI values indicate superior performance.
 
+![picture 7](/images/Picture8.png)
+*Fig.7: Forecasts for gauge-corrected hourly cumulative precipitation ≥1 mm/h. Each contour region corresponds to the band of probability of precipitation ≥1 mm/h that the respective model assigns to that region*
+
 ## Impacts of Additional Observations
 
 The model's accuracy is improved by including more atmospheric observations, particularly for longer lead times. MetNet-2 can offer more accurate forecasts by gathering information from different sources like satellites, radars, and weather stations.
@@ -101,6 +117,9 @@ The model's accuracy is improved by including more atmospheric observations, par
 ## Blend of Methods
 
 MetNet-2 incorporates forecasts from conventional NWP models like HRRR in a hybrid configuration. This method enables MetNet-2 to surpass even post-processed HRRR predictions, showcasing its ability to derive distinctive insights and enhance forecast accuracy.
+
+![picture 8](/images/Picture9.png)
+*Fig.8: Forecasts that use MetNet-2 are visualized as 3D-like contour plots. Each contour region corresponds to one of the visualised rates of precipitation of 0.2, 1.0, 2.0, 4.0, and 8.0 mm/h. The color intensity within the contour region that corresponds to rate r is the probability of precipitation P(≥r) that the respective model predict*
 
 ## Case Studies and Real-World Applications
 
