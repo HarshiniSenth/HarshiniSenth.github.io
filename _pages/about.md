@@ -48,14 +48,14 @@ MetNet-3 represents the latest advancement in the series, pushing the boundaries
 *	**Integration with Google Products:** Available in the contiguous United States and parts of Europe, enhancing weather-related services in multiple countries and languages.
 MetNet-3 takes the advancements of its predecessors and amplifies them, providing unprecedented accuracy and resolution in weather forecasting.
 
-![picture 3](/images/Picture4.gif)
+![GIF](/images/Picture4.gif)
 *Fig.3: the formation of a new large precipitation pattern in the central US; it is not just forecasting of existing patterns.Top: Ground truth, Bottom: Probability map as predicted by MetNet-3*
 
 ## The Difficulty Presented by Conventional Weather Models
 
 Conventional Numerical Weather Prediction (NWP) models use supercomputers to replicate the physics of the atmosphere. Despite their effectiveness, these models are limited by computational bottlenecks and the requirement for regular updates. Enhancing these models requires either more advanced atmospheric simulations or higher resolution, both of which are computationally expensive.
 
-![picture 4](/images/Picture5.gif)
+![GIF](/images/Picture5.gif)
 *Fig.4: Example ground truth image: Instantaneous precipitation (mm/hr) based on radar (MRMS) capturing a 12 hours-long progression*
 
 ## Understanding Numerical Weather Prediction Models
