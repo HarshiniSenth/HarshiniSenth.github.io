@@ -166,7 +166,7 @@ To ensure the full advantages of deep learning models are realized, it is crucia
 
 The MetNet series showcases the rapid advancements in neural weather forecasting. From the foundational MetNet-1 to the state-of-the-art MetNet-3, each iteration has brought significant improvements in accuracy, resolution, and computational efficiency. These models not only enhance our ability to predict weather with greater precision but also integrate seamlessly into everyday applications, making accurate weather information more accessible to the public. As deep learning continues to evolve, we can expect even more sophisticated and reliable weather forecasting models in the future.
 
-#### Appendix: Understanding Key Metrics
+### Appendix: Understanding Key Metrics
 To fully appreciate the performance of MetNet-2, it is helpful to understand some of the key metrics used to evaluate weather models. Here, we provide a brief overview of these metrics.
  
 ###### Cumulative Ranked Probability Score (CRPS)
@@ -199,7 +199,7 @@ Ensemble methods combine the predictions of multiple models to improve accuracy 
 XAI refers to techniques that make the predictions of machine learning models more interpretable and understandable. This transparency is essential for building trust in the model's predictions.
  
 
-#### References
+### References
 
 For those interested in further reading, here is a list of references and resources related to deep learning and weather forecasting.
 *	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts”
