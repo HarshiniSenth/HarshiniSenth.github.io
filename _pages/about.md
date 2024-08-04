@@ -166,17 +166,6 @@ To ensure the full advantages of deep learning models are realized, it is crucia
 
 The MetNet series showcases the rapid advancements in neural weather forecasting. From the foundational MetNet-1 to the state-of-the-art MetNet-3, each iteration has brought significant improvements in accuracy, resolution, and computational efficiency. These models not only enhance our ability to predict weather with greater precision but also integrate seamlessly into everyday applications, making accurate weather information more accessible to the public. As deep learning continues to evolve, we can expect even more sophisticated and reliable weather forecasting models in the future.
 
-![Types of Weather Models](/images/img2.png)
-*Fig. 2: Types of Weather Models (WRITE THE DESCRIPTION IN DETAIL)*
-
-
-
- 
-
-![GIF](https://blogger.googleusercontent.com/img/a/AVvXsEhpJxLN_5CuSyz_gt-xrDIoLyi1HQ0PdAYHQgomGhbABA-qbDAcevBYsq0XcgpozNP3e_UWvwmgoUOC6pxv5vjKnDM4Wdn8zy6GYv3jVe3iccXNKh_-x4V0RAFugPfroW3FHmFcuQmLTzaNZGDultf0a72BrweNciUhWKSzYcgl1buu0gyg7BrV7k--WA=s1600)
-*Fig 2: Illustration of the computation through MetNet-2. As the computation progresses, the network processes an ever larger context from the input and makes a probabilistic forecast of the likely future weather conditions. (ADD REF)*
-
-
 #### Appendix: Understanding Key Metrics
 To fully appreciate the performance of MetNet-2, it is helpful to understand some of the key metrics used to evaluate weather models. Here, we provide a brief overview of these metrics.
  
