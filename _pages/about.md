@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Innovating Weather Prediction: MetNet-2 and Forecasting Twelve-Hour Precipitation."
+title: "Innovating Weather Prediction: MetNet and Forecasting Twelve-Hour Precipitation."
 author_profile: true
 redirect_from: 
   - /about/
@@ -48,14 +48,14 @@ MetNet-3 represents the latest advancement in the series, pushing the boundaries
 *	**Integration with Google Products:** Available in the contiguous United States and parts of Europe, enhancing weather-related services in multiple countries and languages.
 MetNet-3 takes the advancements of its predecessors and amplifies them, providing unprecedented accuracy and resolution in weather forecasting.
 
-![GIF](/images/Picture4.gif)
+![GIF](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidyInWvqdPpdIndLrxzykAODCeJ_p69uqvYOpasjFcBQU5o8Mtr-DiLfZXZrkJel9TD9SxZEmyIb58r6TZjRw57D8aSjl9P2jxCOsK7XZeXY0J3B8UMIFnl6aqXqhd0wft_NQGBi9KqpSUHAgw2c4JoYMdt27sKp6xcvOyMfjASpaZZzlI9o8lesj3GsrL/s720/image14.gif)
 *Fig.3: the formation of a new large precipitation pattern in the central US; it is not just forecasting of existing patterns.Top: Ground truth, Bottom: Probability map as predicted by MetNet-3*
 
 ## The Difficulty Presented by Conventional Weather Models
 
 Conventional Numerical Weather Prediction (NWP) models use supercomputers to replicate the physics of the atmosphere. Despite their effectiveness, these models are limited by computational bottlenecks and the requirement for regular updates. Enhancing these models requires either more advanced atmospheric simulations or higher resolution, both of which are computationally expensive.
 
-![GIF](/images/Picture5.gif)
+![GIF](https://blogger.googleusercontent.com/img/a/AVvXsEidl9U_aE6zh6zn8niiFA1H2Cz-ftmPFXV6Bi8R8u2bo2vWMc1it0gUFZb-ru5lgKF8f_zMmfooQPnYDKfXX-0L8Vz4f-216vZV79_6aTJhuGmWH8i9edO9clpxa_X3e7wjDhNRrF6oAMhKMrcNgF10p7aRpI98CVhEqz8BJ8wbgsnIbYo8nrWbzFpE0Q=s512)
 *Fig.4: Example ground truth image: Instantaneous precipitation (mm/hr) based on radar (MRMS) capturing a 12 hours-long progression*
 
 ## Understanding Numerical Weather Prediction Models
