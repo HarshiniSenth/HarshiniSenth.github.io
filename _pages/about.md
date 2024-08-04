@@ -156,4 +156,48 @@ The MetNet series showcases the rapid advancements in neural weather forecasting
 *Fig 2: Illustration of the computation through MetNet-2. As the computation progresses, the network processes an ever larger context from the input and makes a probabilistic forecast of the likely future weather conditions. (ADD REF)*
 
 
+#### Appendix: Understanding Key Metrics
+To fully appreciate the performance of MetNet-2, it is helpful to understand some of the key metrics used to evaluate weather models. Here, we provide a brief overview of these metrics.
+ 
+###### Cumulative Ranked Probability Score (CRPS)
+The CRPS measures the accuracy of probabilistic forecasts by comparing the predicted probability distribution to the observed outcome. It is a continuous version of the Ranked Probability Score (RPS) and is particularly useful for evaluating forecasts of continuous variables, such as precipitation amounts. Lower CRPS values indicate better performance.
+ 
+###### Critical Success Index (CSI)
+The CSI evaluates the accuracy of categorical forecasts by considering the number of correct predictions relative to the total number of events.
+ 
+###### Glossary of Terms
+To aid in understanding the technical aspects of MetNet-2, we provide a glossary of key terms used in the field of weather forecasting and deep learning.
+Numerical Weather Prediction (NWP)
+NWP involves using mathematical models to simulate the behavior of the atmosphere and predict future weather conditions. These models are based on the principles of physics, fluid dynamics, and thermodynamics.
+ 
+###### Data Assimilation
+Data assimilation is the process of integrating observational data into a weather model to create an accurate initial state for the forecast. This step is crucial for improving the accuracy of the model's predictions.
+ 
+###### Convolutional Neural Network (CNN)
+A CNN is a type of neural network designed to process grid-like data, such as images. It consists of layers that perform convolution operations to extract features from the input data.
+ 
+###### Recurrent Neural Network (RNN)
+An RNN is a type of neural network designed to handle sequential data, such as time series. It has connections that form directed cycles, allowing it to maintain a memory of previous inputs.
+ 
+###### Transfer Learning
+Transfer learning involves using a pre-trained model on a new task. By leveraging the knowledge gained from the original task, the model can achieve better performance with less training data.
+ 
+###### Ensemble Methods
+Ensemble methods combine the predictions of multiple models to improve accuracy and robustness. Common techniques include bagging, boosting, and stacking.
+ 
+###### Explainable AI (XAI)
+XAI refers to techniques that make the predictions of machine learning models more interpretable and understandable. This transparency is essential for building trust in the model's predictions.
+ 
+
+#### References
+
+For those interested in further reading, here is a list of references and resources related to deep learning and weather forecasting.
+*	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts”
+*	**Google Research: “MetNet:** A Neural Weather Model for Precipitation Forecasting”
+*	**Google AI Blog: “MetNet:** A Neural Weather Model for Precipitation Forecasting"
+*	**Google AI Blog: “MetNet-3:** A state-of-the-art neural weather model available in Google products”
+*	**American Meteorological Society:** "Numerical Weather Prediction: Past, Present, and Future"
+*	**IEEE Spectrum:** "How AI and Machine Learning Are Transforming Weather Forecasting"
+*	**Journal of Applied Meteorology and Climatology:** "Evaluation of Probabilistic Forecasts Using the CRPS and CSI Metrics"
+*	**Nature:** "Accurate Medium-Range Global Weather Forecasting with 3D Deep Learning"
 
