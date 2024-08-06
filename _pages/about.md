@@ -145,11 +145,9 @@ where:
 - $$ \text{TP} $$ is the number of true positives (correctly predicted events).
 - $$ \text{FN} $$ is the number of false negatives (missed events).
 - $$ \text{FP} $$ is the number of false positives (false alarms).
-* **CRPS:** Evaluates the precision of probabilistic predictions by comparing the forecasted probability distribution with the actual result. Lower CRPS scores correlate with improved performance.
-*	**CSI:** Assesses the precision of categorical predictions based on the ratio of correct forecasts to the total number of events. Higher CSI values indicate superior performance.
 
-![picture 7](/images/Picture8.png)
-*Fig.7: Forecasts for gauge-corrected hourly cumulative precipitation ≥1 mm/h. Each contour region corresponds to the band of probability of precipitation ≥1 mm/h that the respective model assigns to that region*
+![picture 7](images/Screenshot 2024-08-06 215732.png)
+*Fig.7: Evaluation of the models’ performance (dataset A). Performance comparison on test dataset A between the probabilistic MetNet-2 and HREF. Nonprobabilistic HRRR results as reference. (a) Evaluation based on probabilistic CRPS that includes all rates of gauge-corrected hourly cumulative precipitation. (b) Evaluation based on the categoricalCSI for the 2mm/h rate*
 
 ## Impacts of Additional Observations
 
