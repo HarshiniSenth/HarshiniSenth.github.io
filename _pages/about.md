@@ -205,12 +205,18 @@ XAI refers to techniques that make the predictions of machine learning models mo
 ### References
 
 For those interested in further reading, here is a list of references and resources related to deep learning and weather forecasting.
-*	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts” [Link](https://www.nature.com/articles/s41467-022-32483-x)
+*	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts” 
 *	**Google Research: “MetNet:** A Neural Weather Model for Precipitation Forecasting”
+
 *	**Google AI Blog: “MetNet:** A Neural Weather Model for Precipitation Forecasting"
+[Link](https://research.google/pubs/metnet-a-neural-weather-model-for-precipitation-forecasting/)
+*	**Google AI Blog: “MetNet-2:** Deep Learning for 12-Hour Precipitation Forecasting”
+[Link](https://research.google/blog/metnet-2-deep-learning-for-12-hour-precipitation-forecasting/)
 *	**Google AI Blog: “MetNet-3:** A state-of-the-art neural weather model available in Google products”
+[Link](https://research.google/blog/metnet-3-a-state-of-the-art-neural-weather-model-available-in-google-products/)
 *	**American Meteorological Society:** "Numerical Weather Prediction: Past, Present, and Future"
 *	**IEEE Spectrum:** "How AI and Machine Learning Are Transforming Weather Forecasting"
+[Link](https://biopen.bi.no/bi-xmlui/bitstream/handle/11250/3086114/s%C3%B8derlund_202.pdf?sequence=4&isAllowed=y)
 *	**Journal of Applied Meteorology and Climatology:** "Evaluation of Probabilistic Forecasts Using the CRPS and CSI Metrics"
 *	**Nature:** "Accurate Medium-Range Global Weather Forecasting with 3D Deep Learning"
 
