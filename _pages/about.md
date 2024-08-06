@@ -104,7 +104,11 @@ MetNet-2 includes an advanced neural structure created to manage the intricacies
 
 MetNet-2 has undergone thorough testing to guarantee its dependability and precision. The model was trained to predict rainfall across a vast area of the Continental United States, yielding remarkable outcomes.
 
-### Cumulative Ranked Probability Score (CRPS)
+## Comparison with Conventional Models
+
+MetNet-2 performs better than the HREF model in terms of CRPS and CSI for both low and high precipitation rates. These measurements offer a thorough assessment of the model's effectiveness.
+
+#### Cumulative Ranked Probability Score (CRPS)
 
 The CRPS measures the accuracy of probabilistic forecasts by comparing the predicted cumulative distribution function (CDF) to the observed outcome. Lower CRPS values indicate better performance.
 
@@ -128,7 +132,7 @@ $$
 where:
 - $$ X $$ and $$ X' $$ are independent random variables sampled from the distribution $$ F $$.
 
-### Critical Success Index (CSI)
+#### Critical Success Index (CSI)
 
 The CSI evaluates the accuracy of categorical forecasts by considering the number of correct predictions relative to the total number of events. Higher CSI values indicate better performance.
 
@@ -141,10 +145,6 @@ where:
 - $$ \text{TP} $$ is the number of true positives (correctly predicted events).
 - $$ \text{FN} $$ is the number of false negatives (missed events).
 - $$ \text{FP} $$ is the number of false positives (false alarms).
-
-## Comparison with Conventional Models
-
-MetNet-2 performs better than the HREF model in terms of CRPS and CSI for both low and high precipitation rates. These measurements offer a thorough assessment of the model's effectiveness.
 * **CRPS:** Evaluates the precision of probabilistic predictions by comparing the forecasted probability distribution with the actual result. Lower CRPS scores correlate with improved performance.
 *	**CSI:** Assesses the precision of categorical predictions based on the ratio of correct forecasts to the total number of events. Higher CSI values indicate superior performance.
 
