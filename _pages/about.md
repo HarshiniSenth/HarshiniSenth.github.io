@@ -205,7 +205,7 @@ XAI refers to techniques that make the predictions of machine learning models mo
 ### References
 
 For those interested in further reading, here is a list of references and resources related to deep learning and weather forecasting.
-*	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts”
+*	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts” [Link](https://www.nature.com/articles/s41467-022-32483-x)
 *	**Google Research: “MetNet:** A Neural Weather Model for Precipitation Forecasting”
 *	**Google AI Blog: “MetNet:** A Neural Weather Model for Precipitation Forecasting"
 *	**Google AI Blog: “MetNet-3:** A state-of-the-art neural weather model available in Google products”
