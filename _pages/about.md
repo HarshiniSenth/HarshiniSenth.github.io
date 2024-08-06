@@ -104,6 +104,44 @@ MetNet-2 includes an advanced neural structure created to manage the intricacies
 
 MetNet-2 has undergone thorough testing to guarantee its dependability and precision. The model was trained to predict rainfall across a vast area of the Continental United States, yielding remarkable outcomes.
 
+### Cumulative Ranked Probability Score (CRPS)
+
+The CRPS measures the accuracy of probabilistic forecasts by comparing the predicted cumulative distribution function (CDF) to the observed outcome. Lower CRPS values indicate better performance.
+
+$$
+\text{CRPS}(F, y) = \int_{-\infty}^{\infty} \left( F(x) - \mathbf{1}(x \geq y) \right)^2 dx
+$$
+
+
+where:
+- $$ F(x) $$ is the CDF of the forecasted distribution.
+- $$ \mathbf{1}(x \geq y) $$ is the Heaviside step function, which is 1 if $$ x \geq y $$ and 0 otherwise.
+- $$ y $$ is the observed outcome.
+
+Alternatively, for distributions with a finite first moment, the CRPS can be expressed as:
+
+$$
+\text{CRPS}(F, y) = \mathbb{E}_{X \sim F}[|X - y|] - \frac{1}{2} \mathbb{E}_{X, X' \sim F}[|X - X'|]
+$$
+
+
+where:
+- $$ X $$ and $$ X' $$ are independent random variables sampled from the distribution $$ F $$.
+
+### Critical Success Index (CSI)
+
+The CSI evaluates the accuracy of categorical forecasts by considering the number of correct predictions relative to the total number of events. Higher CSI values indicate better performance.
+
+$$
+\text{CSI} = \frac{\text{TP}}{\text{TP} + \text{FN} + \text{FP}}
+$$
+
+
+where:
+- $$ \text{TP} $$ is the number of true positives (correctly predicted events).
+- $$ \text{FN} $$ is the number of false negatives (missed events).
+- $$ \text{FP} $$ is the number of false positives (false alarms).
+
 ## Comparison with Conventional Models
 
 MetNet-2 performs better than the HREF model in terms of CRPS and CSI for both low and high precipitation rates. These measurements offer a thorough assessment of the model's effectiveness.
@@ -172,12 +210,6 @@ The MetNet series showcases the rapid advancements in neural weather forecasting
 ### Appendix: Understanding Key Metrics
 To fully appreciate the performance of MetNet-2, it is helpful to understand some of the key metrics used to evaluate weather models. Here, we provide a brief overview of these metrics.
  
-###### Cumulative Ranked Probability Score (CRPS)
-The CRPS measures the accuracy of probabilistic forecasts by comparing the predicted probability distribution to the observed outcome. It is a continuous version of the Ranked Probability Score (RPS) and is particularly useful for evaluating forecasts of continuous variables, such as precipitation amounts. Lower CRPS values indicate better performance.
- 
-###### Critical Success Index (CSI)
-The CSI evaluates the accuracy of categorical forecasts by considering the number of correct predictions relative to the total number of events.
- 
 ###### Glossary of Terms
 To aid in understanding the technical aspects of MetNet-2, we provide a glossary of key terms used in the field of weather forecasting and deep learning.
 Numerical Weather Prediction (NWP)
@@ -206,8 +238,7 @@ XAI refers to techniques that make the predictions of machine learning models mo
 
 For those interested in further reading, here is a list of references and resources related to deep learning and weather forecasting.
 *	**Nature Communications:** “Deep Learning for Twelve-Hour Precipitation Forecasts” 
-*	**Google Research: “MetNet:** A Neural Weather Model for Precipitation Forecasting”
-
+[Link](https://www.nature.com/articles/s41467-022-32483-x)
 *	**Google AI Blog: “MetNet:** A Neural Weather Model for Precipitation Forecasting"
 [Link](https://research.google/pubs/metnet-a-neural-weather-model-for-precipitation-forecasting/)
 *	**Google AI Blog: “MetNet-2:** Deep Learning for 12-Hour Precipitation Forecasting”
